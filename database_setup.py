@@ -1,7 +1,12 @@
 import sqlite3
+import os
 
 def create_database():
-    conn = sqlite3.connect("ecommerce.db")
+
+    DATABASE_PATH = os.path.join(os.getcwd(), "database.db")  # Adjust as needed
+    conn = sqlite3.connect(DATABASE_PATH)
+
+    #conn = sqlite3.connect("ecommerce.db")
     cursor = conn.cursor()
 
     # Create Products table
