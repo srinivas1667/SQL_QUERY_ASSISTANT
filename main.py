@@ -5,6 +5,9 @@ import streamlit as st
 import os
 import sqlite3
 import google.generativeai as genai
+import database_setup
+
+database_setup.create_database()
 
 # Configure Genai Key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
